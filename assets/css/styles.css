@@ -1,0 +1,258 @@
+
+	/*General Style*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font: normal 16px sans-serif;
+	color: #555;
+}
+header nav {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	opacity: 0.7;
+	color: white;
+
+}
+a:hover {
+	opacity: 1;
+}
+a.btn {
+	background: #85d6dd;
+	border-radius: 4px;
+	opacity: 1;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font: normal 15px sans-serif;
+	padding: 20px 35px;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 80px;
+}
+@media (max-width: 800px) {
+	section {
+		padding: 50px 20px;
+	}
+}
+section:not(.hero):nth-child(even){
+	background:#eeeeee;
+}
+section .title {
+	font: bold 32px "Open Sans";
+	text-align: center;
+	margin-bottom: 30px;
+}
+section p {
+	text-align: center;
+	max-width: 800px;
+	margin-bottom: 30px;
+	line-height: 2;
+}
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+hr {
+	max-width: 50%;
+	width: 400px;
+    border: 0;
+    height: 1px;
+    margin-bottom: 60px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+i {
+	color: #85d6dd;
+}
+
+	/*Header Style*/
+
+header {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	justify-content: space-between;
+	padding: 50px;
+	opacity: 0;
+	z-index: 1;
+	color: white;
+	animation: 1s headerSlid 0.5s forwards;
+}
+@media screen and (max-width:530px ){
+	header {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	header h2 {
+		margin-bottom: 15px;
+	}
+}
+@keyframes headerSlid {
+	100% {
+		opacity: 1;
+	}
+}
+header nav {
+	display: flex;
+}
+header nav li {
+	margin-right: 15px;
+}
+
+	/*Hero Style*/
+
+.hero {
+	position: relative;
+	min-height: 100vh;
+	color: white;
+}
+
+.hero .background-image {
+	position: absolute;
+	background-size: cover;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.hero-content-area {
+	text-align: center;
+	opacity: 0;
+	transform: translateY(100px);
+	animation: 1s contentSlid 0.5s forwards;
+}
+@keyframes contentSlid {
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.hero h1 {
+	font: bold 50px sans-serif;
+	margin-bottom: 15px;
+}
+.hero h3 {
+	font: normal 25px sans-serif;
+	margin-bottom: 30px;
+}
+
+	/*Destination Style*/
+
+.destinations .grid div {
+	height: 350px;
+	background-size: cover;
+	background-clip: content-box;
+	background-position: center;
+	padding: 20px;
+
+}
+
+.destinations .grid .small {
+	flex-basis: 30%;
+}
+.destinations .grid .large {
+	flex-basis: 70%;
+}
+@media screen and (max-width: 1000px) {
+	.destinations .grid .small,
+	.destinations .grid .large {
+		flex-basis: 50%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.destinations .grid .small,
+	.destinations .grid .large {
+		flex-basis: 100%;
+	}
+}
+
+	/*Packages Style*/
+
+.packages .grid div {
+	padding: 50px;
+	flex-basis: 50%;
+	text-align: center;
+}
+@media screen and (max-width: 800px) {
+	.packages .grid div {
+		flex-basis: 100%;
+	}	
+}
+.packages .grid h4 {
+	font-size: 30px;
+	margin: 25px 0;
+}
+
+	/*Testimonials Style*/
+.testimonials .quote {
+    margin: 30px 100px;
+}
+@media screen and (max-width: 800px) {
+	.testimonials .quote {
+    	margin: 10px 40px;
+
+	}
+
+}
+.contact form {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.contact form .btn {
+	padding: 18px 42px;
+}
+
+.contact form input {
+	padding: 18px 42px;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+	flex-grow: 1;
+	border:0;
+}
+footer {
+	display: flex;
+	padding: 30px 20px;
+	justify-content: space-between;
+	align-items: center;
+	background: #85d6dd;
+	color: white;
+}
+footer i {
+	color: white;
+}
+footer .social {
+	display: flex;
+}
+@media screen and (max-width: 800px) {
+	footer {
+		flex-direction: column;
+	}
+	footer p {
+		margin-bottom: 15px;
+	}
+	.contact form input {
+		margin-right: auto;
+		margin-bottom: 10px;
+	}
+}
+footer .social div {
+	margin-right: 15px;
+}
